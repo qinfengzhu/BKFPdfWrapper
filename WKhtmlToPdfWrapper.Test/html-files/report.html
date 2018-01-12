@@ -1,0 +1,460 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>待转换的报告文件-考虑css与javascript加载问题</title>
+    <style type="text/css">
+        ul {
+            text-decoration: none;
+            list-style: none;
+        }
+        ul li {
+            text-decoration: none;
+            margin-bottom: 6px;
+        }
+        .md-title {
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        .split-pa {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #000000;
+        }
+
+        .small-title {
+            margin-left: 1em;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .pline {
+            text-indent: 4em;
+        }
+        /*进行分页*/
+        tr {
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+<body>
+    <div class="md-title">信息确认</div>
+    <!--合并用药-->
+    <div class="split-pa">
+        <div class="small-title">合并用药</div>
+        <div class="pline">受试者自上次访视至今是否有新的合并用药或者原有合并用药的改变?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"合并用药表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--美容治疗-->
+    <div class="split-pa">
+        <div class="small-title">美容治疗</div>
+        <div class="pline">受试者自上次访视至今是否有接受过新的美容治疗?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"美容治疗表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--受试者问卷-->
+    <div class="split-pa">
+        <div class="small-title">受试者问卷</div>
+        <div class="pline">是否在此访视中完成了受试者问卷的填写?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->如果发现在受试者问卷中记录了局部注射部位反应不良事件，请将其填写于"局部注射部位反应表"或"不良事件表"内。</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否->请完成受试者问卷调查依赖采集安全性信息。</span>
+            </li>
+        </ul>
+    </div>
+    <!--不良事件-->
+    <div class="split-pa">
+        <div class="small-title">不良事件</div>
+        <div class="pline">自上次访视至今是否有新的不良事件发生?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"不良事件表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--合并用药-->
+    <div class="split-pa">
+        <div class="small-title">合并用药</div>
+        <div class="pline">受试者自上次访视至今是否有新的合并用药或者原有合并用药的改变?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"合并用药表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--美容治疗-->
+    <div class="split-pa">
+        <div class="small-title">美容治疗</div>
+        <div class="pline">受试者自上次访视至今是否有接受过新的美容治疗?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"美容治疗表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--受试者问卷-->
+    <div class="split-pa">
+        <div class="small-title">受试者问卷</div>
+        <div class="pline">是否在此访视中完成了受试者问卷的填写?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->如果发现在受试者问卷中记录了局部注射部位反应不良事件，请将其填写于"局部注射部位反应表"或"不良事件表"内。</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否->请完成受试者问卷调查依赖采集安全性信息。</span>
+            </li>
+        </ul>
+    </div>
+    <!--不良事件-->
+    <div class="split-pa">
+        <div class="small-title">不良事件</div>
+        <div class="pline">自上次访视至今是否有新的不良事件发生?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"不良事件表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--合并用药-->
+    <div class="split-pa">
+        <div class="small-title">合并用药</div>
+        <div class="pline">受试者自上次访视至今是否有新的合并用药或者原有合并用药的改变?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"合并用药表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--美容治疗-->
+    <div class="split-pa">
+        <div class="small-title">美容治疗</div>
+        <div class="pline">受试者自上次访视至今是否有接受过新的美容治疗?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"美容治疗表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--受试者问卷-->
+    <div class="split-pa">
+        <div class="small-title">受试者问卷</div>
+        <div class="pline">是否在此访视中完成了受试者问卷的填写?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->如果发现在受试者问卷中记录了局部注射部位反应不良事件，请将其填写于"局部注射部位反应表"或"不良事件表"内。</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否->请完成受试者问卷调查依赖采集安全性信息。</span>
+            </li>
+        </ul>
+    </div>
+    <!--不良事件-->
+    <div class="split-pa">
+        <div class="small-title">不良事件</div>
+        <div class="pline">自上次访视至今是否有新的不良事件发生?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"不良事件表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--合并用药-->
+    <div class="split-pa">
+        <div class="small-title">合并用药</div>
+        <div class="pline">受试者自上次访视至今是否有新的合并用药或者原有合并用药的改变?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"合并用药表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--美容治疗-->
+    <div class="split-pa">
+        <div class="small-title">美容治疗</div>
+        <div class="pline">受试者自上次访视至今是否有接受过新的美容治疗?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"美容治疗表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--受试者问卷-->
+    <div class="split-pa">
+        <div class="small-title">受试者问卷</div>
+        <div class="pline">是否在此访视中完成了受试者问卷的填写?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->如果发现在受试者问卷中记录了局部注射部位反应不良事件，请将其填写于"局部注射部位反应表"或"不良事件表"内。</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否->请完成受试者问卷调查依赖采集安全性信息。</span>
+            </li>
+        </ul>
+    </div>
+    <!--不良事件-->
+    <div class="split-pa">
+        <div class="small-title">不良事件</div>
+        <div class="pline">自上次访视至今是否有新的不良事件发生?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"不良事件表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--合并用药-->
+    <div class="split-pa">
+        <div class="small-title">合并用药</div>
+        <div class="pline">受试者自上次访视至今是否有新的合并用药或者原有合并用药的改变?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"合并用药表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--美容治疗-->
+    <div class="split-pa">
+        <div class="small-title">美容治疗</div>
+        <div class="pline">受试者自上次访视至今是否有接受过新的美容治疗?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"美容治疗表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--受试者问卷-->
+    <div class="split-pa">
+        <div class="small-title">受试者问卷</div>
+        <div class="pline">是否在此访视中完成了受试者问卷的填写?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->如果发现在受试者问卷中记录了局部注射部位反应不良事件，请将其填写于"局部注射部位反应表"或"不良事件表"内。</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否->请完成受试者问卷调查依赖采集安全性信息。</span>
+            </li>
+        </ul>
+    </div>
+    <!--不良事件-->
+    <div class="split-pa">
+        <div class="small-title">不良事件</div>
+        <div class="pline">自上次访视至今是否有新的不良事件发生?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"不良事件表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--合并用药-->
+    <div class="split-pa">
+        <div class="small-title">合并用药</div>
+        <div class="pline">受试者自上次访视至今是否有新的合并用药或者原有合并用药的改变?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"合并用药表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--美容治疗-->
+    <div class="split-pa">
+        <div class="small-title">美容治疗</div>
+        <div class="pline">受试者自上次访视至今是否有接受过新的美容治疗?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"美容治疗表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--受试者问卷-->
+    <div class="split-pa">
+        <div class="small-title">受试者问卷</div>
+        <div class="pline">是否在此访视中完成了受试者问卷的填写?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->如果发现在受试者问卷中记录了局部注射部位反应不良事件，请将其填写于"局部注射部位反应表"或"不良事件表"内。</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否->请完成受试者问卷调查依赖采集安全性信息。</span>
+            </li>
+        </ul>
+    </div>
+    <!--不良事件-->
+    <div class="split-pa">
+        <div class="small-title">不良事件</div>
+        <div class="pline">自上次访视至今是否有新的不良事件发生?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"不良事件表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--合并用药-->
+    <div class="split-pa">
+        <div class="small-title">合并用药</div>
+        <div class="pline">受试者自上次访视至今是否有新的合并用药或者原有合并用药的改变?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"合并用药表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--美容治疗-->
+    <div class="split-pa">
+        <div class="small-title">美容治疗</div>
+        <div class="pline">受试者自上次访视至今是否有接受过新的美容治疗?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"美容治疗表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--受试者问卷-->
+    <div class="split-pa">
+        <div class="small-title">受试者问卷</div>
+        <div class="pline">是否在此访视中完成了受试者问卷的填写?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->如果发现在受试者问卷中记录了局部注射部位反应不良事件，请将其填写于"局部注射部位反应表"或"不良事件表"内。</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否->请完成受试者问卷调查依赖采集安全性信息。</span>
+            </li>
+        </ul>
+    </div>
+    <!--不良事件-->
+    <div class="split-pa">
+        <div class="small-title">不良事件</div>
+        <div class="pline">自上次访视至今是否有新的不良事件发生?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"不良事件表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--合并用药-->
+    <div class="split-pa">
+        <div class="small-title">合并用药</div>
+        <div class="pline">受试者自上次访视至今是否有新的合并用药或者原有合并用药的改变?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"合并用药表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--美容治疗-->
+    <div class="split-pa">
+        <div class="small-title">美容治疗</div>
+        <div class="pline">受试者自上次访视至今是否有接受过新的美容治疗?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"美容治疗表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+    <!--受试者问卷-->
+    <div class="split-pa">
+        <div class="small-title">受试者问卷</div>
+        <div class="pline">是否在此访视中完成了受试者问卷的填写?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->如果发现在受试者问卷中记录了局部注射部位反应不良事件，请将其填写于"局部注射部位反应表"或"不良事件表"内。</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否->请完成受试者问卷调查依赖采集安全性信息。</span>
+            </li>
+        </ul>
+    </div>
+    <!--不良事件-->
+    <div class="split-pa">
+        <div class="small-title">不良事件</div>
+        <div class="pline">自上次访视至今是否有新的不良事件发生?</div>
+        <ul>
+            <li>
+                <input type="checkbox" name="select" /><span>是->请记录于"不良事件表"内</span>
+            </li>
+            <li>
+                <input type="checkbox" name="select" /><span>否</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
